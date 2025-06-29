@@ -5,12 +5,12 @@ import BannerImage1 from "../assets/Images/aboutus1.webp"
 import BannerImage2 from "../assets/Images/aboutus2.webp"
 import BannerImage3 from "../assets/Images/aboutus3.webp"
 import Footer from "../components/Common/Footer"
-import ContactFormSection from "../components/core/AboutPage/ContactFormSection"
-import LearningGrid from "../components/core/AboutPage/LearningGrid"
-import Quote from "../components/core/AboutPage/Quote"
+import ContactFormSection from "../components/Core/AboutPage/ContactFormSection"
+import LearningGrid from "../components/Core/AboutPage/LearningGrid"
+import Quote from "../components/Core/AboutPage/Quote"
 import StatsComponenet from "../components/Core/AboutPage/StatsComponent"
 import HighlightText from "../components/Core/HomePage/HighlightText"
-// import ReviewSlider from "../components/common/ReviewSlider"
+// import ReviewSlider from "../components/Common/ReviewSlider"
 
 const About = () => {
   return (
