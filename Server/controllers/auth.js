@@ -6,7 +6,7 @@ const Profile = require('../models/Profile');
 const jwt = require('jsonwebtoken'); 
 const cookieParser = require('cookie-parser');
 const mailSender = require('../utils/mailSender');
-const passwordUpdated = require('../mail/template/passwordUpdate');
+const passwordUpdated = require('../mail/templates/passwordUpdate');
 
 
 //  SendOtp
@@ -307,13 +307,16 @@ exports.changePassword = async (req, res) => {
 
 
         //  send Mail - password Updated
-        const email = user.email;
-        
-        let mailResponse;
-        try{
-            const name = user.firstName + " " + user.lastName;
-            mailResponse = await mailSender(email, "Password Changed Successfully", passwordUpdated(email, user.firstName, name));
-            console.log("Mail sent successfully: ", mailResponse);
+        try {
+            const emailResponse = await mailSender(
+                user.email,
+                "Password for your account has been updated",
+                passwordUpdated(
+                user.email,
+                `Password updated successfully for ${user.firstName} ${user.lastName}`
+                )
+            )
+            console.log("Email sent successfully:", emailResponse.response)
         }
 
         catch(error) {
