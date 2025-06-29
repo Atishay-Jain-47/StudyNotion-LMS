@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "serve -s dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -35,6 +35,7 @@
     "react-super-responsive-table": "^6.0.2",
     "react-type-animation": "^3.2.0",
     "redux-toolkit": "^1.1.2",
+    "serve": "^14.2.4",
     "swiper": "^11.2.8",
     "web-vitals": "^5.0.3"
   },
