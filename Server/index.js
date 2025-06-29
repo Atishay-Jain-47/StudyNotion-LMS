@@ -60,11 +60,9 @@ app.use('/api/v1/course', courseRoute);
 
 //  Default Route
 app.get('/', (req, res) => {
-    return res.status(200).json({
-        success: true,
-        message: "Server is running successfully"
-    });
+  res.redirect('https://study-notion-navy-seven.vercel.app');
 });
+
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
