@@ -59,8 +59,20 @@ app.use('/api/v1/course', courseRoute);
 
 
 //  Default Route
+
 app.get('/', (req, res) => {
-  res.redirect('https://study-notion-navy-seven.vercel.app');
+  res.json({
+    success: true,
+    message: 'Backend is up and running!',
+  });
+});
+
+app.get('/', (req, res) => {
+  if (process.env.NODE_ENV === 'production') {
+    res.redirect('https://study-notion-navy-seven.vercel.app');
+  } else {
+    res.send('Backend is running locally.');
+  }
 });
 
 
