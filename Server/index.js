@@ -60,7 +60,7 @@ app.use('/api/v1/course', courseRoute);
 
 //  Default Route
 app.get('/', (req, res) => {
-  res.redirect('https://studynotion-lms-3.onrender.com');
+  res.redirect('https://study-notion-navy-seven.vercel.app');
 });
 
 
