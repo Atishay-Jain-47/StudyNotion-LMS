@@ -25,10 +25,7 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: [
-    "https://studynotion-lms-qnvg.onrender.com", // original frontend (Render)
-    "https://study-notion-navy-seven.vercel.app" // new frontend (Vercel)
-    ],
+    origin: "https://study-notion-navy-seven.vercel.app",
     credentials: true,
 }));
 app.use(fileUpload({
