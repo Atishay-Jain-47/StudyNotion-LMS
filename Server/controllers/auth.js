@@ -35,7 +35,7 @@ exports.sendOtp = async (req, res) => {
             digits: true
         });
 
-        console.log("Generated OTP:", otp);
+        // console.log("Generated OTP:", otp);
 
         // Check unique OTP or Not
         var checkOtp = await Otp.findOne({ otp });
@@ -222,7 +222,7 @@ exports.login = async (req, res) => {
         }
 
         const token = jwt.sign(payload, process.env.JWT_SECRET, {
-            expiresIn: '30d'  //  Token will expire in 1 day
+            expiresIn: '30d'  //  Token will expire in 30 day
         }); 
 
         user.token = token;  //  Add token to user object

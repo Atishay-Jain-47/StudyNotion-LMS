@@ -7,7 +7,7 @@ function getRandomInt(max) {
 exports.createCategory = async (req, res) => {
 	try {
 		const { name, description } = req.body;
-		if (!name) {
+		if (!name){
 			return res
 				.status(400)
 				.json({ success: false, message: "All fields are required" });
@@ -59,7 +59,7 @@ exports.categoryPageDetails = async (req, res) => {
           match: { status: "Published" },
           populate: "ratingAndReviews",
         })
-        .exec()
+        .exec();
   
       //console.log("SELECTED COURSE", selectedCategory)
       // Handle the case when the category is not found
