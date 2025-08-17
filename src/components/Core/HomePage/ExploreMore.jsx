@@ -11,7 +11,7 @@ const tabsName = [
   "Career paths",
 ];
 
-const ExploreMore = () => {
+const  ExploreMore = () => {
   const [currentTab, setCurrentTab] = useState(tabsName[0]);
   const [courses, setCourses] = useState(HomePageExplore[0].courses);
   const [currentCard, setCurrentCard] = useState(

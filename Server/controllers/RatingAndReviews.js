@@ -146,4 +146,4 @@ exports.getAllRating = async (req, res) => {
             message:error.message,
         })
     } 
-}
+}   
